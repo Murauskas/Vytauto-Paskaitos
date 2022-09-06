@@ -1,3 +1,60 @@
-asasasa {
-    asas: 0;
+html,
+body,
+main {
+    height: 100%;
+}
+
+body {
+    background-color: rgb(135, 138, 184);
+}
+
+main {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+main p {
+    margin: 0;
+}
+
+.card {
+    display: flex;
+    padding: 40px;
+    margin: 50px auto;
+    width: 550px;
+    background-color: white;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.profile img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+}
+
+.main-content p {
+    margin-bottom: 10px;
+}
+
+.main-content button {
+    float: right;
+}
+
+.main-content span {
+    color: aqua;
+}
+
+h3 {
+    margin: 0 0 10px 0;
+}
+
+.stats {
+    display: flex;
+    gap: 10px;
+    padding: 10px 0;
 }
