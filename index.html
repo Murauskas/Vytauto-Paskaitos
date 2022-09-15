@@ -1,84 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta http-eq uiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>logoipsum</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="normalize.css" />
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex praktika (galerija)</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="normalize.css">
 </head>
-
 <body>
     <div class="with-layout">
-        <header class="heading">
-            <img src="logo.png" alt="logo" />
+        <header>
+                <h1>Photo Gallery</h1>
         </header>
     </div>
-    <div class="with-layout">
-        <main class="container">
-            <h1 class="card-header">Your journey begins here</h1>
-            <div class="with-cover">
-                <div class="card-content">
-
-
-                    <form>
-                        <div class="password-login">
-                            <div class="button-layout">
-                                <button class="button-small button-primary" type="button">
-                                    login
-                                </button>
-                                <button class="button-small button-secondary" type="button">
-                                    sign up
-                                </button>
-                            </div>
-                            <div class="login-block">
-                                <div class="input-list">
-                                    <input type="text" name="email" placeholder="Enter email or username" required
-                                        class="login-input" />
-                                    <input type="password" name="password" placeholder="Enter password" required
-                                        class="login-input" />
-                                </div>
-                                <a href="#" class="link">Forgot password?</a>
-                            </div>
-                            <button class="button-medium button-primary" type="submit">
-                                log in
-                            </button>
-                        </div>
-                    </form>
-                    <div class="or-label"><span>OR</span></div>
-                    <div class="social-login">
-
-                        <a href="#" class="social-button">
-                            <img src="images/facebook-icon.svg" />
-                        </a>
-                        <a href="#" class="social-button">
-                            <img src="images/google-icon.svg" />
-                        </a>
-                        <a href="#" class="social-button">
-                            <img src="images/twitter-icon.svg" class="smaller-icon" />
-                        </a>
-                        <a href="#" class="social-button">
-                            <img src="images/linkedin-icon.svg" class="smaller-icon" />
-                        </a>
-                    </div>
+    <main>
+        <div class="with-layout">
+            <div class="photo-row">
+                <div class="photo-pair">
+                    <img src="images/sakura.jpg" alt="sakura" class="image-small">
+                    <img src="images/glass.jpg" alt="glass" class="image-big">
                 </div>
-                <img src="images/stock.jpg" alt="stock" class="cover">
+                <div class="photo-pair second-pair">
+                    <img src="images/boat.jpg" alt="boat" class="image-big">
+                    <img src="images/mountain.jpg" alt="mountain" class="image-small">
+                </div>
             </div>
-        </main>
-    </div>
-    <div class="with-layout">
-        <footer class="main-footer">
-            <a href="#" class="foot">F.A.Q</a>
-            <a href="#" class="foot">Privacy policy</a>
-            <a href="#" class="foot">Terms of use</a>
-            <a href="#" class="foot">Contacts</a>
-        </footer>
-    </div>
+            <div class="photo-row second-row">
+                <div class="photo-pair">
+                    <img src="images/jungle.jpg" alt="sakura" class="image-small">
+                    <img src="images/red-tree.jpg" alt="glass" class="image-big">
+                </div>
+                <div class="photo-pair second-pair">
+                    <img src="images/something.jpg" alt="boat" class="image-big">
+                    <img src="images/landscape.jpg" alt="mountain" class="image-small">
+                </div>
+            </div>
+            <div class="photo-row third-row">
+                <div class="photo-pair">
+                    <img src="images/grass.jpg" alt="sakura" class="image-small">
+                    <img src="images/cabin.jpg" alt="glass" class="image-big">
+                </div>
+                <div class="photo-pair second-pair">
+                    <img src="images/ballons.jpg" alt="boat" class="image-big">
+                    <img src="images/stars.jpg" alt="mountain" class="image-small">
+                </div>
+            </div>
+    </main>
+</div>
 </body>
-
 </html>
