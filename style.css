@@ -1,20 +1,31 @@
+* {
+    box-sizing: border-box;
+}
+
 html,
 body {
     min-height: 100vh;
     font-family: "Inter" , sans-serif;
 }
 
-.with-layout {
+.wrapper {
     padding: 0 20px;
+    max-width: 375px;
+}
+
+header {
+    min-height: 60px;
 }
 
 header h1 {
-    margin: 0;
-    line-height: 60px;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 115%;
 }
 
 main {
     padding: 10px 0 10px 0;
+    min-height: 100vh;
     background-color: rgb(182, 181, 181);
 }
 
@@ -44,11 +55,11 @@ main {
 
 .second-row {
     display: flex;
-    gap: 11px;
+    gap: 10px;
 }
 
 @media only screen and (min-width: 1024px) {
-    .with-layout {
+    .wrapper {
         padding: 0 32px;
         margin: 0 auto;
         max-width: 1024px;
@@ -80,5 +91,3 @@ main {
         gap: 20px;
     }
 }
-
-/* ajsajsn */
