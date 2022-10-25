@@ -1,123 +1,236 @@
+html,
+body {
+  font-family: sans-serif;
+  height: 100%;
+  margin: 0;
+  background-color: #F5F5F5;
+}
 
-.flex-1 {
-  display: flex;
-  flex-wrap: wrap;
-} /* Pirmos užduoties sprendimą rašyti čia. */
+.layout {
+  display: grid;
+  grid-template-areas: 
+  "navigation header"
+  "navigation h-content";
+  grid-template-columns: 246px auto;
+  grid-template-rows: 186px auto;
+  height: 100%;
+}
 
-.flex-1 > * {
-  width: 100%;
-  flex-basis: calc(100% / 2);
-  margin-bottom: 5px;
-} /* Pirmos užduoties sprendimą rašyti čia. */
-
-@media screen and (max-width:768px) {
-  .flex-1 .ca-test-box:nth-child(1) {
-    order: 1;
-  }
-
-
-}/* Antros užduoties sprendimą pridėti čia. */
-
-.flex-3 {
+.navigation {
+  grid-area: navigation;
+  background-color: #FFFFFF;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-}/* Trečios užduoties sprendimą pridėti čia. */
+  padding: 40px 30px 26px 30px;
+}
 
-.flex-3 p {
-  display: flex;
-}/* Trečios užduoties sprendimą pridėti čia. */
-
-p:nth-child(even) {
-  justify-content: center;
-}/* Trečios užduoties sprendimą pridėti čia. */
-
-p:nth-child(3) {
-  justify-content: flex-end;
-}/* Trečios užduoties sprendimą pridėti čia. */
-
-.flex-4 {
-  display: flex;
-}/* Ketvirtos užduoties sprendimą rašyti čia. */
-
-.flex-4 > *:nth-child(2) {
+.navigation__link-list {
   flex: 1;
-}/* Ketvirtos užduoties sprendimą rašyti čia. */
-
-.flex-4 > *:nth-child(5) {
-  flex: 2;
-}/* Ketvirtos užduoties sprendimą rašyti čia. */
-
-.flex-5 {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 10px;
-}/* Penktos užduoties sprendimą pridėti čia. */
-
-.flex-6 {
-  display: flex;
-  gap: 10px;
-}/* Šeštos užduoties sprendimą pridėti čia. */
-
-.flex-6 span:nth-child(1) {
-  order: 9;
-}
-
-.flex-6 span:nth-child(2) {
-  order: 10;
-}
-
-.flex-6 span:nth-child(3) {
-  order: 1;
-}
-
-.flex-6 span:nth-child(4) {
-  order: 4;
-}
-
-.flex-6 span:nth-child(5) {
-  order: 5;
-}
-
-.flex-6 span:nth-child(6) {
-  order: 6;
-}
-
-.flex-6 span:nth-child(7) {
-  order: 3;
-}
-
-.flex-6 span:nth-child(8) {
-  order: 7;
-}
-
-.flex-6 span:nth-child(9) {
-  order: 8;
-}
-
-.flex-6 span:nth-child(10) {
-  order: 2;
-}/* Šeštos užduoties sprendimą pridėti čia. */
-
-.flex-7 {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.flex-7 img {
-  margin-top: 0;
-  height: 150px;
-  width: 220px;
-  border:  none;
+  margin-top: 46px;
+  border-bottom: 1px solid rgb(128, 128, 128, 0.3);
   margin-bottom: 20px;
-  /* Septintos užduoties sprendimą pridėti čia. */
 }
 
-.pair {
+.navigation__link-list h6 {
+  font-size: 16px;
+  color: grey;
+  margin-bottom: 15px;
+}
+
+.navigation__link {
+  color: #4D4D4D;
+  height: 46px;
+  text-decoration: none;
   display: flex;
-  margin: 0 auto;
+  align-items: center;
 }
 
-/* Septintos užduoties sprendimą pridėti čia. */
+.navigation__account h5 {
+  margin: 0;
+}
+
+.navigation__account address a {
+  text-decoration: none;
+  color: grey;
+  font-style: normal;
+  font-size: 12px;
+}
+
+.navigation__link span {
+  margin-left: 18px;
+}
+
+.link--active {
+  margin-left: -20px;
+  padding-left: 20px;
+  border-radius: 10px;
+  text-align: cent;
+  background: rgba(27, 89, 248, 0.1);
+  color: #1B59F8;
+}
+
+.fa-solid {
+  width: 20px;
+  text-align: center;
+  object-fit: scale-down;
+}
+
+.fa-bolt {
+  color: #1B59F8;
+}
+
+.profile__img {
+  height: 50px;
+  border-radius: 50%;
+}
+
+.header {
+  padding-left: 44px;
+  padding-right: 25px;
+  grid-area: header;
+  background-color: #F5F5F5;
+}
+
+.header--top {
+  display: flex;
+  border-bottom: 1px solid rgb(128, 128, 128, 0.3);
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
+.header--top a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+}
+
+.nav__box {
+  display: flex;
+  align-items: baseline;
+}
+
+.nav__box h2 {
+  margin-right: 34px;
+}
+
+.nav__box nav {
+  background-color: #F0F2F5;
+  border-radius: 12px;
+}
+
+.nav__box ul {
+  display: flex;
+  list-style-type: none;
+  gap: 75px;
+  padding-left: 0;
+  padding-right: 25px;
+}
+
+.topic__box {
+  margin-right: 40px;
+}
+
+.blue {
+  color: #1B59F8;
+  background-color: #FFFFFF;
+  padding: 13px;
+  border-radius: 10px;
+}
+
+.blue-1 {
+  margin-right: -30px;
+  margin-left: 4px;
+  padding-left: 27px;
+  padding-right: 27px;
+}
+
+.content {
+  grid-area: h-content;
+  background-color: #F5F5F5;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px , 1fr));
+  /* grid-template-columns: repeat(4 , 250px); */
+  grid-auto-rows: 230px;
+  gap: 29px;
+  margin-left: 44px;
+  margin-right: 63px;
+  overflow-y: auto;
+}
+
+
+.box {
+  background-color: #1B59F8;
+  height: 100%;
+  border-radius: 18px;
+}
+
+@media screen and (max-width:760px) {
+  .header {
+    display: none;
+  }
+
+  .layout {
+    grid-template-columns: auto;
+    grid-template-rows: 114px auto;
+    grid-template-areas: 
+    "navigation"
+    "h-content";
+  }
+
+  .logo__desktop {
+    display: none;
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* main {
+  display: grid;
+  grid-template-rows: 100px 100px;
+  grid-template-columns: 120px 120px 120px;
+  grid-auto-rows: 100px;
+  grid-auto-columns: 120px;
+  grid-auto-flow: column;
+  gap: 10px;
+  grid-auto-flow: row;
+  grid-auto-columns: 120px;
+  grid-auto-rows: 100px;
+
+  width: 100%;
+  overflow-x: scroll;
+}
+
+main > * {
+  background: rgb(97, 87, 87);
+  min-height: 20px;
+}
+
+p {
+  background-color: red;
+}
+
+.first {
+  grid-column: span 2;
+  grid-row: span 2;
+} */
